@@ -1,6 +1,6 @@
 package com.example.StudentManagementSystem.entity;
 
-public class Subject {
+public class Marks {
     private String Maths;
     private String English;
     private String Hindi;

@@ -8,8 +8,7 @@ public class Student {
     private String phoneNumber;
     private String emailId;
     private Address address;
-    private Subject subject;
-
+    private Marks marks;
 
 
     public int getId() {
@@ -67,14 +66,14 @@ public class Student {
     public void setAddress(Address address) {
         this.address = address;
     }
-
-    public Subject getSubject() {
-        return subject;
+    public Marks getMarks() {
+        return marks;
     }
 
-    public void setSubject(Subject subject) {
-        this.subject = subject;
+    public void setMarks(Marks marks) {
+        this.marks = marks;
     }
+
 
     @Override
     public String toString() {
@@ -86,9 +85,11 @@ public class Student {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", emailId='" + emailId + '\'' +
                 ", address=" + address +
-                ", subject=" + subject +
+                ", marks=" + marks +
                 '}';
     }
+
+
 }
 
 
