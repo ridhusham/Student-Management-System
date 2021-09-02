@@ -2,7 +2,6 @@ package com.example.StudentManagementSystem.service;
 
 import com.example.StudentManagementSystem.entity.Student;
 import com.example.StudentManagementSystem.repository.StudentRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -12,6 +11,7 @@ public class StudentService {
 //    StudentRepository studentRepository;
 
     StudentRepository studentRepository=new StudentRepository();
+
 
     public List<Student> getAll() {
         return studentRepository.getAll();
@@ -28,4 +28,10 @@ public class StudentService {
     public String getStudent(Integer Id){
         return studentRepository.getStudentById(Id);
     }
+
+    public Student updateStudent(Integer Id, Student student) {
+        return studentRepository.updateStudent(Id,student);
+    }
+
+
 }

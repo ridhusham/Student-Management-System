@@ -40,6 +40,18 @@ public class StudentRepository {
 
     }
 
+
+    public Student updateStudent(Integer id, Student student) {
+
+        for(int i = 0;i < studentList.size(); i++)
+        {
+            if(studentList.get(i).getId()==id){
+                return studentList.set(i,student);
+
+            }
+        }
+        return null;
+    }
 }
 
 
