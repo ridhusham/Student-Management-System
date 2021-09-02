@@ -37,4 +37,14 @@ public class Address {
     public void setDistrict(String district) {
         this.district = district;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "houseName='" + houseName + '\'' +
+                ", postOffice='" + postOffice + '\'' +
+                ", pincode=" + pincode +
+                ", district='" + district + '\'' +
+                '}';
+    }
 }

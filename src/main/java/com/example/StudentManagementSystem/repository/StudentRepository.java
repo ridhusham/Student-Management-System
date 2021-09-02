@@ -1,5 +1,6 @@
 package com.example.StudentManagementSystem.repository;
 
+import com.example.StudentManagementSystem.entity.Marks;
 import com.example.StudentManagementSystem.entity.Student;
 
 import org.springframework.stereotype.Repository;
@@ -11,23 +12,24 @@ import java.util.List;
 public class StudentRepository {
 
     public static List<Student> studentList = new ArrayList<Student>();
+    List<Marks> listmark= new ArrayList<>();
 
     public List<Student> getAll() {
         return studentList;
     }
 
     public String add(Student student) {
+
+        for (int i = 0; i < studentList.size(); i++) {
+            if(studentList.get(i).getId()==student.getId()){
+                return "Failed to add";
+            }
+        }
+        //studentList.stream().filter();
         studentList.add(student);
         return "Successfully added";
     }
 
-    public String edit(Student student) {
-
-//        boolean flag= studentList.contains(student);
-        Integer indexVal = studentList.indexOf(student);
-//        /studentList.edit(student);
-        return indexVal.toString();
-    }
 
     public String getStudentById(Integer Id){
 
@@ -41,16 +43,33 @@ public class StudentRepository {
     }
 
 
-    public Student updateStudent(Integer id, Student student) {
+    public String updateStudent(Integer id, Student student) {
 
         for(int i = 0;i < studentList.size(); i++)
         {
             if(studentList.get(i).getId()==id){
-                return studentList.set(i,student);
+                 studentList.set(i,student);
+                 return "Student Updated";
+            }
+        }
+        return "Student not found";
+    }
+
+    public String add(Marks marks) {
+
+        for (int i = 0; i < studentList.size(); i++) {
+            if(studentList.get(i).getId()== marks.getId()){
+                listmark.add(marks);
+                return "Marks successfully added";
 
             }
         }
-        return null;
+        return "Student Id not valid";
+
+    }
+
+    public List<Marks> getAllMarks() {
+        return listmark;
     }
 }
 

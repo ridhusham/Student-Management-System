@@ -1,41 +1,52 @@
 package com.example.StudentManagementSystem.entity;
 
 public class Marks {
-    private String Maths;
-    private String English;
-    private String Hindi;
-    private String Science;
+    private Integer id;
+    private String Subject;
+    private String Mark;
+    private String Grade;  // pass or fail
 
-    public String getMaths() {
-        return Maths;
+    public Integer getId() {
+        return id;
     }
 
-    public void setMaths(String maths) {
-        Maths = maths;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getEnglish() {
-        return English;
+
+    @Override
+    public String toString() {
+        return "Marks{" +
+                "id=" + id +
+                ", Subject='" + Subject + '\'' +
+                ", Mark='" + Mark + '\'' +
+                ", Grade='" + Grade + '\'' +
+                '}';
     }
 
-    public void setEnglish(String english) {
-        English = english;
+    public String getSubject() {
+        return Subject;
     }
 
-    public String getHindi() {
-        return Hindi;
+    public void setSubject(String subject) {
+        Subject = subject;
     }
 
-    public void setHindi(String hindi) {
-        Hindi = hindi;
+    public String getMark() {
+        return Mark;
     }
 
-    public String getScience() {
-        return Science;
+    public void setMark(String mark) {
+        Mark = mark;
     }
 
-    public void setScience(String science) {
-        Science = science;
+    public String getGrade() {
+        return Grade;
+    }
+
+    public void setGrade(String grade) {
+        Grade = grade;
     }
 }
 

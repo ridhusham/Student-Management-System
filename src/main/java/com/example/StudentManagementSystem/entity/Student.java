@@ -1,5 +1,6 @@
 package com.example.StudentManagementSystem.entity;
 
+
 public class Student {
     private int id;
     private String firstName;
@@ -8,7 +9,6 @@ public class Student {
     private String phoneNumber;
     private String emailId;
     private Address address;
-    private Marks marks;
 
 
     public int getId() {
@@ -63,17 +63,6 @@ public class Student {
         return address;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-    public Marks getMarks() {
-        return marks;
-    }
-
-    public void setMarks(Marks marks) {
-        this.marks = marks;
-    }
-
 
     @Override
     public String toString() {
@@ -85,7 +74,6 @@ public class Student {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", emailId='" + emailId + '\'' +
                 ", address=" + address +
-                ", marks=" + marks +
                 '}';
     }
 
